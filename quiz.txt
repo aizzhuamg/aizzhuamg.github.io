@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <link rel="icon" href="favicon1.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #f2f2f2;
+      color: #000;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Roboto', sans-serif;
+      color: #0066cc;
+    }
+
+    nav {
+      background-color: #000;
+    }
+
+    nav a {
+      color: #fff;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    label {
+      color: #000;
+    }
+
+    button {
+      background-color: #8b8e91;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004080;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      margin-top: 20px;
+      padding: 10px 0;
+    }
+ .quiz-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .options li {
+            margin-bottom: 10px;
+        }
+
+        .quiz-image {
+            float: center;
+            margin-left: 20px;
+            max-width: 200px; 
+            height: auto;
+        }
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html" style="font-size: 24px;">
+    <i class="fas fa-globe"></i> Influence of Humankind
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html"><i class="fas fa-users"></i> About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container mt-4">
+  <h1 class="text-center">Quiz: Influence of Humankind to the World</h1>
+  <div class="col-md-6">
+    <img src="image5.jpg" alt="Influence of Humankind Image" class="img-fluid">
+  </div>
+  </div>
+  </div>
+ 
+  <div class="mb-4">
+    <p>1. What is the primary greenhouse gas responsible for climate change?</p>
+    <label>
+      <input type="radio" name="q1" value="a"> a) Carbon Dioxide
+    </label>
+    <label>
+      <input type="radio" name="q1" value="b"> b) Methane
+    </label>
+    <label>
+      <input type="radio" name="q1" value="c"> c) Nitrous Oxide
+    </label> 
+    <p></p><button onclick="checkAnswer('q1', 'a')">Submit Answer</button>
+    <p id="result_q1"></p>
+  </div>
+
+  <div class="mb-4">
+    <p>2. Which of the following is a major cause of deforestation?</p>
+    <label>
+      <input type="radio" name="q2" value="a"> a) Urbanization
+    </label>
+    <label>
+      <input type="radio" name="q2" value="b"> b) Agriculture
+    </label>
+    <label>
+      <input type="radio" name="q2" value="c"> c) Industrialization
+    </label>
+    <p></p><button onclick="checkAnswer('q2', 'b')">Submit Answer</button>
+    <p id="result_q2"></p>
+  </div>
+
+
+
+<div class="mb-4">
+  <p>3. Which of the following is a significant contributor to air pollution?</p>
+  <label>
+    <input type="radio" name="q3" value="a"> a) Volcanic eruptions
+  </label>
+  <label>
+    <input type="radio" name="q3" value="b"> b) Transportation emissions
+  </label>
+  <label>
+    <input type="radio" name="q3" value="c"> c) Forest fires
+  </label>
+  <p></p><button onclick="checkAnswer('q3', 'b')">Submit Answer</button>
+  <p id="result_q3"></p>
+</div>
+
+
+<div class="mb-4">
+  <p>4. What is the primary source of ocean pollution?</p>
+  <label>
+    <input type="radio" name="q4" value="a"> a) Oil spills
+  </label>
+  <label>
+    <input type="radio" name="q4" value="b"> b) Industrial waste
+  </label>
+  <label>
+    <input type="radio" name="q4" value="c"> c) Plastic pollution
+  </label>
+  <p></p><button onclick="checkAnswer('q4', 'c')">Submit Answer</button>
+  <p id="result_q4"></p>
+</div>
+
+
+<div class="mb-4">
+  <p>5. Which renewable energy source produces electricity by harnessing the natural flow of water?</p>
+  <label>
+    <input type="radio" name="q5" value="a"> a) Solar power
+  </label>
+  <label>
+    <input type="radio" name="q5" value="b"> b) Wind power
+  </label>
+  <label>
+    <input type="radio" name="q5" value="c"> c) Hydropower
+  </label>
+  <p></p><button onclick="checkAnswer('q5', 'c')">Submit Answer</button>
+  <p id="result_q5"></p>
+</div>
+
+
+<div class="mb-4">
+  <p>6. What is the main purpose of the Paris Agreement?</p>
+  <label>
+    <input type="radio" name="q6" value="a"> a) Combat deforestation
+  </label>
+  <label>
+    <input type="radio" name="q6" value="b"> b) Address climate change
+  </label>
+  <label>
+    <input type="radio" name="q6" value="c"> c) Promote sustainable agriculture
+  </label>
+  <p></p><button onclick="checkAnswer('q6', 'b')">Submit Answer</button>
+  <p id="result_q6"></p>
+</div>
+
+
+<div class="mb-4">
+  <p>7. What is the term for the gradual increase in the Earth's average surface temperature?</p>
+  <label>
+    <input type="radio" name="q7" value="a"> a) Global warming
+  </label>
+  <label>
+    <input type="radio" name="q7" value="b"> b) Ice age
+  </label>
+  <label>
+    <input type="radio" name="q7" value="c"> c) Greenhouse effect
+  </label>
+  <p></p><button onclick="checkAnswer('q7', 'a')">Submit Answer</button>
+  <p id="result_q7"></p>
+</div>
+
+
+<div class="mb-4">
+  <p>8. Which gas is primarily responsible for the depletion of the ozone layer?</p>
+  <label>
+    <input type="radio" name="q8" value="a"> a) Carbon monoxide
+  </label>
+  <label>
+    <input type="radio" name="q8" value="b"> b) Chlorofluorocarbons (CFCs)
+  </label>
+  <label>
+    <input type="radio" name="q8" value="c"> c) Sulfur dioxide
+  </label>
+  <p></p><button onclick="checkAnswer('q8', 'b')">Submit Answer</button>
+  <p id="result_q8"></p>
+</div>
+
+
+
+</div>
+
+
+<footer class="bg-dark text-light mt-4 p-3 text-center">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Us</a>
+  </div>
+  <p>&copy; 2023 Influence of Humankind</p>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    
+    alert('Thank you! Your answer is recorded.');
+  });
+</script>
+
+
+<script>
+  function checkAnswer(questionId, correctAnswer) {
+    var selectedAnswer = document.querySelector('input[name=' + questionId + ']:checked');
+
+    if (selectedAnswer) {
+      var resultElement = document.getElementById('result_' + questionId);
+      resultElement.innerHTML = selectedAnswer.value === correctAnswer
+        ? '<span style="color: green;">Correct!</span>'
+        : '<span style="color: red;">Incorrect. The correct answer is ' + correctAnswer.toUpperCase() + '.</span>';
+    } else {
+      alert('Please select an answer before submitting.');
+    }
+  }
+</script>
+
+</body>
+</html>
